@@ -47,13 +47,12 @@ The material taught us how to:
 - Pointwise maximum of convex functions is convex (formally proved: if each $f_i$ is convex, then $f(x) = \max_{i \in [m]} \{f_i(x)\}$ is convex)
 - Epigraph characterization of convexity
 
-**Proof techniques covered:**
-
+### Proof Techniques Covered
 The course emphasizes proof-writing. A central early result is:
 
-> *If $f_i$ is convex for all $i \in [m]$, then $f(x) = \max_{i \in [m]} f_i(x)$ is convex.*
+If $f_i$ is convex for all $i \in [m]$, then $f(x) = \max_{i \in [m]} f_i(x)$ is convex.
 
-**Proof sketch:** By definition of convexity, $f_i(\alpha x_1 + (1-\alpha)x_2) \leq \alpha f_i(x_1) + (1-\alpha) f_i(x_2)$. Taking the max over $i$ on both sides and noting that the maximum of any $f_i(x)$ is $f(x)$ by definition yields the convexity inequality for $f$.
+**Proof sketch:** By definition of convexity, $f_i(\alpha x_1 + (1 - \alpha)x_2) \le \alpha f_i(x_1) + (1 - \alpha)f_i(x_2)$. Taking the max over $i$ on both sides and noting that the maximum of any $f_i(x)$ is $f(x)$ by definition yields the convexity inequality for $f$.
 
 ---
 
@@ -61,7 +60,7 @@ The course emphasizes proof-writing. A central early result is:
 
 The **Cutting-Plane Method** solves $\min_{x \in X} f(x)$ for convex $f$ by iteratively building a piecewise-linear lower approximation:
 
-$$f_k(x) = \max_{i=1,\ldots,k} \left\{ f(x^i) + (g^i)^\top (x - x^i) \right\}$$
+$$f_k(x) = \max_{i=1,\ldots,k} \left\lbrace f(x^i) + (g^i)^\top (x - x^i) \right\rbrace$$
 
 **Algorithm:**
 
